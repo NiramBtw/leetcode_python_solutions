@@ -12,11 +12,13 @@ class Solution(object):
 
         """
         # lets try make a finder
+        # haystack = "hello", needle = "ll"
+        # so we need to cheak if he == ll , el==ll, ll ==ll , lo == ll
         
         if len(needle) == 0:
             return 0
-        for i in range(len(haystack) - len(needle) + 1):
-            if haystack[i : i +len(needle)] == needle:
+        for i in range(len(haystack) - len(needle) + 1):    # the for go on any index to cheak the == , we dont need to cheak the last element 
+            if haystack[i : i +len(needle)] == needle:      # we need to cheak 2 elements so i + the len (needle)
                 return i
         return -1
             
