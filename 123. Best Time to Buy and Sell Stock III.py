@@ -9,12 +9,12 @@ class Solution(object):
         """
         
         # states
-        a = -prices[0]
-        b = float('-inf')
-        c = float('-inf')
-        d = float('-inf')
+        a = -prices[0] # -3
+        b = float('-inf') # -inf
+        c = float('-inf') # -inf
+        d = float('-inf') # -inf
         
-        for price in prices:
+        for price in prices:  # price- 3
             a = max(a, -price)
             b = max(b, a + price)
             c = max(c, b -price)
