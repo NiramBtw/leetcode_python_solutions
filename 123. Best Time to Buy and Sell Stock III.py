@@ -9,14 +9,14 @@ class Solution(object):
         """
         
         # states
-        a = -prices[0] # -3
+        a = -prices[0] # -3 take a negative val because its a buy 
         b = float('-inf') # -inf
         c = float('-inf') # -inf
         d = float('-inf') # -inf
         
         for price in prices:  # price- 3
-            a = max(a, -price)
-            b = max(b, a + price)
-            c = max(c, b -price)
-            d = max(d, c + price)
+            a = max(a, -price)  # buy 
+            b = max(b, a + price)   # sell
+            c = max(c, b -price)    # buy 
+            d = max(d, c + price)   # sell and last state
         return d
