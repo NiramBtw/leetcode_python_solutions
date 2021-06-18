@@ -11,23 +11,22 @@ class Solution(object):
         1,3,4
         
         if both not empty keep runnig 
-        else mean that 1 list have no elemet then we can take 
+        else mean that 1 list have no elemet hen we can take 
         the remainder of that list 
-        
         
         """
         
-        dummy = ListNode()
+        dummy = ListNode()  # the dummy is the current pointer 
         tail = dummy 
-        # using while cuz for more general prob
-        while l1 and l2:
+        
+        while l1 and l2:    # using the loop all time l1 and l2 have some val
             if l1.val < l2.val:
                 tail.next = l1
                 l1 = l1.next
             else:
                 tail.next = l2
                 l2 = l2.next
-                #the tail pointer will update regardless of which node 
+                # the tail pointer will update regardless of which node 
                 # we insert into the list
             tail = tail.next
             # need to find the non empty list and then insert
